@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  background-image: url('static/doctor1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+.center {
+  text-align: center;
+ }
+</style>
+<body>
+<h1>Consult The Doctor<h1/>
+<br>
+<br>
+<div class="center">
+<h2>Appointment Form</h2>
+<br>
+<br>
+<form action="/action_page.php" target="_blank">
+  <label for="fullname">Full Name:</label><br>
+  <input type="text" id="fullname" name="fullname" value=" "><br><br>
+
+  <label for="email">Email Id:</label><br> 
+  <input type="email" id="email" name="email" value=" "><br><br>
+
+  <label for="phone">Contact Number:</label><br>
+  <input type="tel" id="phone" name="phone" placeholder="1234-567-890" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}"><br><br>
+
+  <label for="date">Appointment Date:</label><br>
+  <input type="date" id="Date" name="date"><br><br>
+
+  <label for="time">Preferred Timing:</label><br>
+  <select id="time" name="time">
+    <option value="-select-">-select-</option>
+    <option value="8am to 10am">8am to 10am</option>
+    <option value="10am to 12pm">10am to 12pm</option>
+    <option value="12pm to 2pm">12pm to 2pm</option>
+    <option value="2pm to 4pm">2pm to 4pm</option>
+    <option value="4pm to 6pm">4pm to 6pm</option>
+    <option value="6pm to 8pm">6pm to 8pm</option>
+  </select>
+  <br><br>
+
+  <label for="location">Location:</label><br>
+  <select id="location" name="location">
+    <option value="-select-">-select-</option>
+    <option value="Kolkata">Kolkata</option>
+  </select>
+  <br><br>
+
+  <label for="clinic">Clinic & Hospitals:</label><br>
+  <select id="clinic" name="clinic">
+    <option value="-select-">select Hospital</option>
+    <option value="Fortis Hospital Kolkata">Fortis Hospital Kolkata</option>
+    <option value="Tata Memorial Hospital Kolkata">Tata Memorial Hospital Kolkata</option>
+    <option value="Apollo Hospital Kolkata">Apollo Hospital Kolkata</option>
+    <option value="Narayana Multispeciality Hospital Kolkata">Narayana Multispeciality Hospital Kolkata</option>
+  </select>
+  <br><br>
+
+  <label for="doctor">Choose a Doctor:</label><br>
+  <select id="doctor" name="doctor">
+    <option value="select doctor">select doctor</option>
+    <option value="Dr. Vatsal Mehta">Dr. Vatsal Mehta</option>
+    <option value="Dr. Aabha Gupta">Dr. Aabha Gupta</option>
+    <option value="Dr. Aarti Kabra">Dr. Aarti Kabra</option>
+    <option value="Dr. Abhay Krishna">Dr. Abhay Krishna</option>
+  </select>
+  <br><br>
+
+  <textarea name="message" style="width:200px; height:100px;">enter your query(optional)</textarea><br><br>
+
+  <button type="button" onclick="alert('Appointment Accepted')">Submit</button>
+</form> 
+
+</div>
+</body>
+</html>
+                       

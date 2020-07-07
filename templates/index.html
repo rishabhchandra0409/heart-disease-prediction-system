@@ -1,0 +1,127 @@
+ <html>
+
+ <style>
+
+  .center {text-align: center;}
+           
+ </style>
+ <head>
+	<title> Prediction System</title>
+	<link rel ="stylesheet" type ="text/css" href= "{{ url_for('static',filename='style1.css') }}">
+	
+	<meta name ="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel ="stylesheet" href ="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+	<section class="header">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg ">
+			<a class=" " href="#"> <img src ="static\main3.jpg"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+						<a class="nav-link" href="#">Home</a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="#">Risk Factors</a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="#">Precautions</a>
+						</li>
+					</ul>
+				</div>
+		</nav>
+
+		<div class="row">
+			<div class="col-md-6">
+			<h1>Let's get started!!</h1>
+			<p>With the beat the heart goes on...</p>
+		</div>
+		</section>
+		
+        <div class="center">	
+	<form action="{{ url_for('predict')}}" method="post">
+                 
+         <br>1.What's your age? </br>
+         <br><input type="text" name="age" placeholder="Age" required="required" /></br>
+         <br>2.How do you identify?</br>
+    	 <br><input type="text" name="sex" placeholder="Gender " required="required" /></br>
+    	 <br>3.What type of chest pain you suffer from?</br>
+         <br><input type="text" name="cp" placeholder="Chest Pain" required="required" /></br>
+    	 <br>4.Blood pressure?</br>
+         <br><input type="text" name="trestbps" placeholder="Resting bp in mmHg" required="required" /></br>
+         <br>5.Enter your cholestrol level</br>
+         <br><input type="text" name="chol" placeholder="Cholestrol " required="required" /></br>
+         <br>6.Flasting Blood Sugar?</br>
+         <br><input type="text" name="fbs" placeholder="Fasting Blood sugar" required="required" /></br>
+         <br>7.Ecg</br>
+         <input type="text" name="restecg" placeholder="Rest ecg" required="required" /></br>
+         <br>8.Maximum heart rate achieved?</br>
+         <br><input type="text" name="thalach" placeholder="Thalach " required="required" /></br>
+         <br>9.Anginal pain?</br>
+         <br><input type="text" name="exang" placeholder="Exercise induced angina" required="required" /></br>
+         <br>10.Numeric ST value?</br>
+         <br><input type="text" name="oldpeak" placeholder="ST value" required="required" /></br>
+         <br>11.How's your slope?</br>
+         <br><input type="text" name="slope" placeholder="Slope " required="required" /></br>
+         <br>12.Number of vessels coloured due to flouropsy?</br>
+         <br><input type="text" name="ca" placeholder="CA" required="required" /></br>
+         <br>13.What's your thalassemia history?</br>
+         <br><input type="text" name="thal" placeholder="thal" required="required" /></br>
+    		<br><button type="submit" class="btn btn-primary btn-block">Predict</button></br>
+            
+    </form>
+   <br>
+   <br>
+         {{ pred }}
+   
+   <br>
+   </div>
+   <br>
+   <br>
+   <br>
+  <div class ="row">
+   <form action="/Consult_Doctor" method="get">
+		<div class = "col-md-4">
+			<div class="service-box">
+			<img src ="static\med.jpg">
+			<input type="submit" value="Consult___Doctor">
+			</div>
+		</div>
+   </form>
+	
+   <form action="/Check_Health_Chart" method="get">	
+		<div class = "col-md-4">
+			<div class=" service-box">
+			<img src ="static\icons.jpg">
+			<input type="submit" value="Check_Health_Chart">
+			</div>
+		</div>
+	</form>
+	
+	<form action="/Excercises" method="get">
+		<div class = "col-md-4">
+			<div class=" service-box">
+			<img src ="static\icons2.jpg">
+		    <input type="submit" value="Excercises_for_Heart">
+			</div>
+		</div>
+	</form>
+	</div>
+		
+	<section class = "service">
+		<div class ="container">
+			<h2 class ="title">Reduce your risk score</h2>
+			<p class ="subtitle">Start today...</p>
+		</div>
+	</section>
+
+</body>
+</html>
